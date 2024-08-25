@@ -1,5 +1,6 @@
 <html>
  <head>
+	 <meta charset="utf-8">
    <style>
     .wrap {position:absolute;top:0;left:0;width:100%;height:100%;}
     .video-wrap {position:relative;height:100%;background:#000;overflow:hidden;}
@@ -13,9 +14,9 @@
   
   <body> 
   <div class="wrap">
-         <p align=center> ¿µ»ó Á¾·á ÈÄ °è¾à¾÷¹« ¾È³» ÆäÀÌÁö°¡ ³ª¿É´Ï´Ù. </p>
+         <p align=center> ì˜ìƒ ì¢…ë£Œ í›„ ê³„ì•½ì—…ë¬´ ì•ˆë‚´ í˜ì´ì§€ê°€ ë‚˜ì˜µë‹ˆë‹¤. </p>
 	<div class="video-wrap">              
-		<video id="video" autoplay muted playsinline class="normal-video">
+		<video id="video" controls autoplay playsinline class="normal-video">
 			<source id="normalloop1" src="movie.mp4" type='video/mp4'/>
 		</video>
 
@@ -25,17 +26,17 @@
 
 $(window).on("load",function(){
 	
-    //À©µµ¿ì ·Îµå ½Ã ºñµğ¿À ÇÃ·¹ÀÌ
+    //ìœˆë„ìš° ë¡œë“œ ì‹œ ë¹„ë””ì˜¤ í”Œë ˆì´
     $("#video").get(0).play();
 	
-    //ÀÛµ¿ÇÏ´ÂÁö ÄÜ¼ÖÃ¢¿¡¼­ È®ÀÎ
+    //ì‘ë™í•˜ëŠ”ì§€ ì½˜ì†”ì°½ì—ì„œ í™•ì¸
     console.log("test");
 })
     
 setInterval(function(){
    if($("#video").prop("ended")){
     
-    //¿µ»óÁ¾·á ÈÄ ¾î¶²Çàµ¿À» ÇÒ°ÇÁö ÀÛ¼º
+    //ì˜ìƒì¢…ë£Œ í›„ ì–´ë–¤í–‰ë™ì„ í• ê±´ì§€ ì‘ì„±
     location.href="contract.htm";
    
    }
